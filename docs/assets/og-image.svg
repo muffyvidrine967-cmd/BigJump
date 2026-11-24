@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="BigJump social preview">
+  <defs>
+    <linearGradient id="og-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7ed"/>
+      <stop offset="0.55" stop-color="#f6f8fc"/>
+      <stop offset="1" stop-color="#e8f0ff"/>
+    </linearGradient>
+    <linearGradient id="og-mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9a3c"/>
+      <stop offset="1" stop-color="#d9650b"/>
+    </linearGradient>
+    <linearGradient id="og-jump" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#1f6feb"/>
+      <stop offset="1" stop-color="#5cb3ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#og-bg)"/>
+  <circle cx="1080" cy="80" r="210" fill="#f6821f" opacity="0.08"/>
+  <circle cx="120" cy="560" r="180" fill="#1f6feb" opacity="0.07"/>
+
+  <g transform="translate(96 210)">
+    <rect width="180" height="180" rx="44" fill="url(#og-mark)"/>
+    <path d="M56 34h39c21 0 34 11 34 28 0 12-6 20-17 24 13 4 20 14 20 27 0 19-15 31-38 31H56V34Zm22 19v29h15c9 0 15-5 15-14s-6-15-15-15H78Zm0 49v30h17c10 0 16-6 16-15s-6-15-16-15H78Z" fill="#fff"/>
+    <path d="M116 70 153 33" fill="none" stroke="url(#og-jump)" stroke-width="13" stroke-linecap="round"/>
+    <path d="M125 33h28v28" fill="none" stroke="url(#og-jump)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="330" y="292" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="96" font-weight="800" letter-spacing="-4" fill="#111827">Big<tspan fill="#d9650b">Jump</tspan></text>
+  <text x="336" y="352" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="32" fill="#5b6472">Cloudflare IP Optimization + DNS Security</text>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="22" font-weight="600">
+    <rect x="336" y="408" width="210" height="54" rx="27" fill="#fff3e8" stroke="#ffdfc2"/>
+    <text x="441" y="442" text-anchor="middle" fill="#d9650b">FASTEST ROUTE</text>
+    <rect x="562" y="408" width="230" height="54" rx="27" fill="#eff6ff" stroke="#cfe2ff"/>
+    <text x="677" y="442" text-anchor="middle" fill="#1f6feb">ENCRYPTED DNS</text>
+    <rect x="808" y="408" width="230" height="54" rx="27" fill="#ecfdf3" stroke="#c7f0d8"/>
+    <text x="923" y="442" text-anchor="middle" fill="#1a7f4b">DNSSEC VERIFIED</text>
+  </g>
+  <text x="336" y="520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" fill="#5b6472">Android · Windows · Open Source</text>
+</svg>

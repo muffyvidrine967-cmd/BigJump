@@ -1,0 +1,9 @@
+/build/
+/.dart_tool/
+/node_modules/
+/.gradle/
+/dist/
+*.apk
+*.exe
+*.zip
+app/android/local.properties
