@@ -1,0 +1,15 @@
+name: secure_dns_core
+description: 纯 Dart 核心：DoH/DoT、DNSSEC 链式校验、DNS 缓存与防污染、Cloudflare IP 优选、本地 HTTP/CONNECT 代理。
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  crypto: ^3.0.3
+  pointycastle: ^3.9.1
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.25.0

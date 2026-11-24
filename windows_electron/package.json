@@ -1,0 +1,14 @@
+{
+  "name": "bigjump-windows",
+  "version": "1.0.0",
+  "description": "BigJump — WebView browser with Cloudflare IP optimization and DNS Security for Windows",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "node build-windows.js"
+  },
+  "devDependencies": {
+    "electron": "38.1.2",
+    "@electron/packager": "18.3.6"
+  }
+}

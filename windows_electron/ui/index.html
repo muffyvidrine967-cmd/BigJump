@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:" />
+  <title>BigJump</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img class="logo-img" src="../assets/favicon.svg" alt="BigJump" />
+      <div>
+        <div class="brand-title">BigJump</div>
+        <div class="brand-sub" data-i18n="brandSub">Cloudflare IP 优选 · DNS Security</div>
+      </div>
+    </div>
+    <div class="nav">
+      <button id="back" data-i18n-title="back" title="后退">←</button>
+      <button id="forward" data-i18n-title="forward" title="前进">→</button>
+      <button id="reload" data-i18n-title="reload" title="刷新">↻</button>
+      <div class="address-wrap">
+        <input id="address" type="text" spellcheck="false" data-i18n-placeholder="addressHint" placeholder="输入网址" />
+      </div>
+      <button id="go" class="primary" data-i18n="go">打开</button>
+      <button id="langBtn" class="lang-btn" type="button" title="Switch language">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="browser-shell">
+      <webview id="browser" src="about:blank" partition="cfbrowser" allowpopups></webview>
+    </section>
+
+    <aside class="panel">
+      <div class="panel-section">
+        <div class="section-title" data-i18n="securityTitle">安全设置</div>
+        <label class="toggle-row">
+          <span><b>DNS Security</b><small data-i18n="dnsSecuritySub">DoH / DoT 加密解析 + DNSSEC 校验</small></span>
+          <input id="dnsSecurity" type="checkbox" checked />
+        </label>
+        <label class="toggle-row">
+          <span><b data-i18n="strictTitle">严格 DNSSEC</b><small data-i18n="strictSub">校验失败时拒绝解析</small></span>
+          <input id="strictDnssec" type="checkbox" />
+        </label>
+        <div class="toggle-row region-row">
+          <span><b data-i18n="regionTitle">DNS 端点区域</b><small data-i18n="regionSub">选择加密 DNS 的服务区域</small></span>
+        </div>
+        <div class="region-options" id="regionOptions">
+          <button type="button" data-region="auto" data-i18n="regionAuto">自动</button>
+          <button type="button" data-region="global" data-i18n="regionGlobal">全球</button>
+          <button type="button" data-region="china" data-i18n="regionChina">国内</button>
+        </div>
+        <label class="toggle-row">
+          <span><b data-i18n="cfOptTitle">Cloudflare IP 优选</b><small data-i18n="cfOptSub">TCP/TLS 测速，选择最快可用节点</small></span>
+          <input id="ipOptimization" type="checkbox" checked />
+        </label>
+        <button id="refreshIps" class="secondary" data-i18n="refreshIps">刷新 Cloudflare IP 段</button>
+      </div>
+
+      <div class="panel-section">
+        <div class="section-title" data-i18n="connectionTitle">当前连接</div>
+        <dl class="facts">
+          <dt data-i18n="statusLabel">状态</dt><dd id="status">-</dd>
+          <dt data-i18n="proxyLabel">本地代理</dt><dd id="proxyInfo">-</dd>
+          <dt data-i18n="hostLabel">域名</dt><dd id="host">-</dd>
+          <dt data-i18n="ipLabel">选中 IP</dt><dd id="selectedIp" class="mono">-</dd>
+          <dt data-i18n="latencyLabel">延迟</dt><dd id="latency">-</dd>
+          <dt data-i18n="dnssecLabel">DNSSEC</dt><dd id="dnssec">-</dd>
+          <dt data-i18n="reasonLabel">说明</dt><dd id="reason">-</dd>
+        </dl>
+        <div class="probe-row">
+          <input id="probeHost" type="text" data-i18n-placeholder="probeHint" placeholder="www.cloudflare.com" />
+          <button id="probe" data-i18n="probe">探测</button>
+        </div>
+      </div>
+
+      <div class="panel-section events-section">
+        <div class="section-title" data-i18n="recentRequests">最近请求</div>
+        <ul id="events" class="events"></ul>
+      </div>
+    </aside>
+  </main>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
